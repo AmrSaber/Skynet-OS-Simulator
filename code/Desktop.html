@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=9"/> 
+
+<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+<link rel='stylesheet' href='assets/css/font-awesome.min.css'>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<title>SkynetOS Desktop</title>
+
+</head>
+<body>
+	<div id="allContent"> 
+
+		<div id='desktopContent'>
+			<div class="nav">
+				<div class="left">
+					SkynetOS Desktop
+				</div>
+
+				<div class="right">
+			
+					<span class="time"></span>
+					<span class="am-pm"></span>
+					<i class="fa fa-power-off fa-fw" onclick="logOut()"></i>
+				</div>
+			</div>
+
+			<div class="luncher">
+				<span data-toggle="tooltip" title="Files">
+		   		 <i class="fa fa-folder" id="folder"></i>
+			  	</span>
+
+				<span data-toggle="tooltip" title="System Setting">
+				<i class="fa fa-cog" onclick="navigateTo()"></i>
+				</span>
+
+				<span data-toggle='tooltip' title="Calculator">
+				
+				<button id='createFile' type='button' data-toggle='modal' data-target='.calculator' style="background-color:transparent; border:0;"><i class="fa fa-calculator" aria-hidden="true" onclick="clearCalc()"></i></button>
+				</span>
+
+			</div>
+
+			<div class='modal fade calculator' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+				  <div class='modal-dialog modal-md' role='document'>
+				    <div class='modal-content'>
+				      <div class='modal-header'>
+				        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				         <h4 class='modal-title'>Calculator</h4>
+				      </div>
+				      <div id = "calculatorBody" class='modal-body'>
+				        <div>
+				          <center>
+				          <label id="answer" class = "num">0</label>
+				          </br>
+				            <input type="text" id="expressionArea" value="0" class = "txta" onchange="change()" autofocus>
+				          </br>
+				            <button onclick="one()" class = "num" >1</button>
+				            <button onclick="two()" class = "num" >2</button>
+				            <button onclick="three()" class = "num" >3</button>
+				            <button onclick="plus()" class = "num" style = "margin : 0px 2px 0px 15px">+</button>
+				            <button onclick="minus()" class = "num" >-</button>
+				          </br>
+				            <button onclick="four()" class = "num">4</button>
+				            <button onclick="five()" class = "num">5</button>
+				            <button onclick="six()" class = "num">6</button>
+				            <button onclick="mul()" class = "num" style = "margin : 0px 2px 0px 15px">*</button>
+				            <button onclick="power()" class = "num">^</button>
+				          </br>
+				            <button onclick="seven()" class = "num" >7</button>
+				            <button onclick="eight()" class = "num" >8</button>
+				            <button onclick="nine()" class = "num" >9</button>
+				            <button onclick="divide()" class = "num" style = "margin : 0px 2px 0px 15px">/</button>
+				            <button onclick="mod()" class = "num" >%</button>
+				          </br>
+				            <button onclick="zero()" class = "num">0</button>
+				            <button onclick="lp()" class = "num">(</button>
+				            <button onclick="rp()" class = "num">)</button>
+				            <button onclick="reset()" class = "num" style = "margin : 0px 2px 0px 15px">AC</button>
+				            <button onclick="buttonClicked()" class = "num">=</button>
+				          </center>
+				        </div>
+				        <div id = "cf" class='modal-footer'>
+				          <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+				        </div>
+				     </div>
+				    </div>
+				  </div>
+				</div>
+
+
+			<div class="desktop">
+				
+			</div>
+		</div>
+
+		<div id ='exploringContent' hidden> 
+			<div class='modal fade newFile' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+	            <div class='modal-dialog modal-sm' role='document'>
+	              <div class='modal-content'>
+	                <div class='modal-header'>
+		                <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+		                 <h4 class='modal-title'>Create New File</h4>
+	                </div>
+	                <div class='modal-body'>
+		                <div class='form-group'>
+		                    <label class='form-label'>File Name </label>
+		                    <input class='form-control create-file' id='file-name' type='text' autofocus >
+		                    <label class='form-label'>File Type </label>
+		                    <select class='form-control' id='file-type' onchange='showHideLink()' >
+		                      <option value='txt' >Text</option>
+		                      <option value='audio'>Audio</option>                 
+		                      <option value='video'>Video</option>
+		                    </select>
+		                </div>
+		                <div id='showHideLink' class='form-group' hidden> 
+		                    <label class='form-label'>Link </label>
+		                  	<input class='form-control create-file' id='file-link' type='text' value='' >
+		                </div>
+		                <div class='modal-footer'>
+		                  <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+		                  <button type='button' class='btn btn-primary' class='close' data-dismiss='modal' aria-label='Close' onclick='creatingFile()'>Save changes</button>
+		                </div>
+		            </div>
+
+	              </div>
+            	</div>
+          	</div>
+
+            <div class='modal fade newFolder' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+              <div class='modal-dialog modal-sm' role='document'>
+                <div class='modal-content'>
+                  <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                     <h4 class='modal-title'>Create New Folder</h4>
+                  </div>
+                  <div class='modal-body'>
+                    <div class='form-group'>
+                        <label class='form-label'>Folder Name </label>
+                        <input class='form-control create-folder' id='folder-name' type='text' autofocus >
+                        
+                    </div>
+                    
+                    <div class='modal-footer'>
+                      <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                      <button type='button' class='btn btn-primary' class='close' data-dismiss='modal' aria-label='Close' onclick='creatingFolder()'>Save changes</button>
+                    </div>
+                </div>
+
+                </div>
+              </div>
+          	</div>
+
+
+
+          	 <div class='modal fade applications' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+              <div class='modal-dialog modal-sm' role='document' id="apps">
+                <div class='modal-content'>
+                  <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close' onclick="closeApps()"><span aria-hidden='true'>&times;</span></button>
+                     <h4 class='modal-title' id="modalTitle"></h4>
+                  </div>
+                  <div class='modal-body' id="textEditor">
+                    <div class='form-group' id="modalBody">
+                        
+                        
+                    </div>
+                    
+                    <div class='modal-footer' >
+                      <button type='button' class='btn btn-default' data-dismiss='modal' onclick="closeApps()">Close</button>
+                      <button type='button' id="modalSave" onclick="saveChanges()" class='btn btn-primary' class='close' data-dismiss='modal' aria-label='Close'>Save changes</button>
+                    </div>
+                </div>
+
+                </div>
+              </div>
+          	</div>
+
+          	<button id='openApps' type='button' class='btn btn-primary' data-toggle='modal' data-target='.applications'></button>
+
+
+
+          	<div class='modal fade rename' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel'>
+	            <div class='modal-dialog modal-sm' role='document' >
+	              <div class='modal-content'>
+	                <div class='modal-header'>
+		                <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+		                 <h4 class='modal-title'>Rename</h4>
+	                </div>
+	                <div class='modal-body' >
+		                <div class='form-group'>
+		                    <label class='form-label'>File Name </label>
+		                    <input class='form-control' id='file-rename' type='text' autofocus>	
+		                </div>
+		                <div class='modal-footer'>
+		                  <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+		                  <button type='button' class='btn btn-primary' class='close' data-dismiss='modal' aria-label='Close' onclick='renamingFile()'>Save changes</button>
+		                </div>
+		            </div>
+
+	              </div>
+            	</div>
+          	</div>
+
+            <div class='popup middle' id='fileExploring'>
+
+              <div id='explorer' class='width1020 element'>
+                <div id='header'>
+                  <h3 class='noselect'>Workspace Explorer</h3>
+                  <i class='material-icons noselect' onclick='closeRoot()';>&#xE5CD;</i>
+                  <div id='dir' class='middle'>
+                    <i class='material-icons' onclick="goBack()">&#xE5C4;</i>
+                    <hr>
+                    <a onclick="goHome()">
+                      <i class='material-icons' >&#xE88A;</i>
+                    </a>
+                    <div id='directory' class='top'></div>
+                  </div>
+                  <div id='view' class='noselect middle'>
+                          
+                  <i class='material-icons' title='Paste' onclick="onPaste()" style="display: none;" id="paste">&#xE14F;</i>
+              	 <button id='rename' type='button' class='btn btn-primary' data-toggle='modal' data-target='.rename'> <i class='material-icons' title='Rename' >text_format</i> </button>
+                  <i class='material-icons' title='Copy' onclick="onCopy()" id="copy">&#xE14D;</i> 
+                  <i class='material-icons' title='Cut'  onclick="onCut()" id="cut">&#xE14E;</i>
+                  <i class='material-icons' title='Delete' onclick="deleteAny()" id="delete">&#xE16C;</i>
+	                 
+                  <button id='createFile' type='button' class='btn btn-primary' data-toggle='modal' data-target='.newFile'><i class='material-icons' title='Create File'>add</i></button>
+
+                  <button id='createFolder' type='button' class='btn btn-primary' data-toggle='modal' data-target='.newFolder'> <i class='material-icons' title='Create Folder'>add_box</i></button> 
+                       
+
+                  <span class='taille'></span>
+                  </div>
+
+                </div>
+                <div id='content' class='view-icons' onclick='selection("content")'>
+
+                </div>
+              </div>
+              <span class='taille'></span>
+            </div>
+		</div> 
+
+	</div>
+
+<script src='assets/js/jquery-3.2.1.js'></script>
+<script src='assets/js/bootstrap.min.js'></script>
+<script src='assets/js/script.js'></script>
+<script src='assets/js/fileSystem.js'></script>
+<script src="assets/js/core.js"> </script>
+<script src="assets/js/calc.js"></script>
+
+
+
+</body>
+</html>

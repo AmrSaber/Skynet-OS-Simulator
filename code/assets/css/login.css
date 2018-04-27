@@ -1,0 +1,40 @@
+body{
+    background-image: url('https://assets.ubuntu.com/v1/ebdfffbf-Aubergine_suru_background.png');
+}
+#loginDiv{
+    background: rgba(200, 200, 200, 0.4);
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    top: 40%;
+    left: 20%;
+    align-content: center;
+    align-items: center;
+}
+#loginSpan{
+    padding: 10px;
+}
+table{
+    display: block;
+}
+td{
+    padding: 0 10px;
+}
+#loginBtn{
+    display: inline-block;
+    position: relative;
+    margin: 10px 5px 5px;
+    left: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(240, 240, 240, 0.5);
+    border: 0;
+    color: white;
+}
+#loginBtn:active{
+    border: 0;
+}
+#loginBtn:hover{
+    background: rgba(220, 220, 220, 0.5);
+}

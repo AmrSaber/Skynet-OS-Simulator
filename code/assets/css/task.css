@@ -1,0 +1,103 @@
+body{
+    overflow: hidden;
+}
+.mySlider{
+    display: inline-block;
+    width: 200px;
+}
+#word{
+    width: 100px;
+}
+.circle{
+    display: inline-block;
+    background: #000;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 0;
+}
+.fa{
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
+.fa-pause{
+    left: -1px;
+}
+.fa-stop{
+    left: 0.5px;
+}
+
+canvas{
+    width: 650px;
+    height: 150px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    display: none;
+    background: #fff;
+}
+
+#playControl{
+    position: relative;
+    top: -5px;
+    left: 0;
+    right: 0;
+    margin-bottom: 0 15px auto;
+    width: 120px;
+}
+
+#titleBar{
+    background: #00589f;
+    color: #fff;
+    height: 35px;
+}
+#titleExit{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.title{
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+#topPanel{
+    width: 100%;
+    background: #0078d7;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 15px 5px 5px;
+}
+#speedHolder, #quantumHolder{
+    border-left: 1px solid #fff;
+    position: relative;
+    top: -4px;
+    font-weight: 600;
+}
+#playControl, #speedHolder, #quantumHolder{
+    padding: 0 5px;
+}
+
+#mainContainer{
+    background: #F5F5F5;
+    height: 5000px;
+}
+
+#myRightPanel{
+    float: right;
+    background: #CFD8DC;
+    height: 5000px;
+    padding: 10px;
+    padding-right: 23px;
+}
+
+#windowWrapper{
+    padding: 15px;
+}
+#myMainWindow{
+    margin: 10px auto;
+    width: 700px;
+}

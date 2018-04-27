@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/task.css">
+    </head>
+    <body>
+        
+        <div id="titleBar">
+            <span id="titleName" class="title">Task Manager</span>
+            <span id="titleExit" class="title">X</span>
+        </div>
+        
+        <!-- Contains play, pause and stop -->
+        <div id="topPanel">
+                <span id="playControl">
+                    <span id="play" class="circle">
+                        <i class="fa fa-play"></i>
+                    </span>
+                    <span id="pause" class="circle">
+                        <i class="fa fa-pause"></i>
+                    </span>
+                    <span id="stop" class="circle">
+                        <i class="fa fa-stop"></i>
+                    </span>
+                </span>
+                
+<!--                <span class="vSpacer"></span>-->
+                
+                <span id="speedHolder">
+                    Speed: <div  id="speedSlider" class="mySlider"></div>
+                </span>
+                
+<!--                <span class="vSpacer"></span>-->
+                
+                <span id="quantumHolder">
+                    Quantum: <div id="quantumSlider" class="mySlider"></div>
+                </span>
+        </div>
+        <!-- end control div -->
+
+        <div id="mainContainer" class="row">
+
+            <div id="windowWrapper" class="col-xs-10">
+                <div id="myMainWindow">
+                    <canvas id="canvas0"></canvas>
+                    <canvas id="canvas1"></canvas>
+                    <canvas id="canvas2"></canvas>
+                    <canvas id="canvas3"></canvas>
+                </div>  
+            </div>
+            
+            <!-- task managment [add, remove, clear] -->
+            <div id="myRightPanel" class="col-xs-2">
+                <div id="manageDiv">
+                    <ul class="list-group strings">
+                        <!--li class="list-group-item">abcdef <a href="#" class="badge">x</a></li-->
+                    </ul>
+                    <div id="addTaskDiv">
+                        <input type="text" id="word" placeholder="Task Text" maxLength="7"/> 
+                        <input type="button" id="addTask" value="Add"/>
+                    </div>
+                </div>
+            </div>
+            <!-- end task managments -->
+            
+            <div class="fix"></div>
+        </div>
+        
+        <script src="assets/js/jquery-3.2.1.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jcanvas.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/task.js"></script>
+    </body>
+</html>
