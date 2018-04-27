@@ -20,7 +20,7 @@ The calculator is pretty much basic, it does the basic arithmetics and powers an
 ### File Manager
 ![File Manager 1](https://i.imgur.com/bbhFi5A.png)
 ![File Manager 2](https://i.imgur.com/LHrYQkm.png)
-Starting from here is the real stuff, this is a very well functioning file system that supports files and folders and supports the basic file oberations such as (copy, cut, paste, rename)  
+Starting from here is the real stuff, this is a very well functioning file system that supports files and folders and supports the basic file operations such as (copy, cut, paste, rename)  
 It shows the current file path, and provdes a back button, the files are saved on the browser cach so when you close the simulator and reopen it, you will find the files and folders you created as you left them, the files can be text, audio or video (audio and video get their content from a link, and they both have bugs :"D), the text is editable in double click so you can view and edit the content as needed.
 
 ### Scheduler
@@ -30,7 +30,7 @@ I really love this sceduler (It was my part of the project), the idea is that it
 In our case the only possible task is writing a pre-defined text in a big box and the simulator provides control over the speed of the execution and the quantum of time given to each task (process).
 
 ## Technical Notes
-* The simulator is all web-based, meaning that it was written in HTML, Javascript and CSS, with the help of some some libraries like jQuery and Bootstrap (dependencies are included with the code in "assets" folder).
+* The simulator is all web-based, meaning that it was written in HTML, Javascript and CSS, with the help of some libraries like jQuery and Bootstrap (dependencies are included with the code in "assets" folder).
 
 * The OS doesn't have huge security (javascript, remember ?), but the level of the security is good enough for a consistent simulator to demonstarte its basic concepts.
 
