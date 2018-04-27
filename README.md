@@ -30,7 +30,7 @@ I really love this sceduler (It was my part of the project), the idea is that it
 In our case the only possible task is writing a pre-defined text in a big box and the simulator provides control over the speed of the execution and the quantum of time given to each task (process).
 
 ## Technical Notes
-* The simulator is all web-based, meaning that it was written in HTML, Javascript and CSS, with the help of some some libraries like jQuery and Bootstrab (dependencies are included with the code in "assets" folder).
+* The simulator is all web-based, meaning that it was written in HTML, Javascript and CSS, with the help of some some libraries like jQuery and Bootstrap (dependencies are included with the code in "assets" folder).
 
 * The OS doesn't have huge secrity (javascript, remember ?), but the level of the security is good enough for a consistent simulator to demonstarte its basic concepts.
 
@@ -47,7 +47,7 @@ In our case the only possible task is writing a pre-defined text in a big box an
 * [Muhammad Magdi](https://github.com/Muhammad-Magdi)
 
 ## Dependencies
-* jQuery
-* Bootstrab
-* Font Awesome
+* [jQuery](http://jquery.com)
+* [Bootstrap](https://getbootstrap.com)
+* [Font Awesome](https://fontawesome.com)  
 All needed dependencies are included in the assets.
