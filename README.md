@@ -32,9 +32,9 @@ In our case the only possible task is writing a pre-defined text in a big box an
 ## Technical Notes
 * The simulator is all web-based, meaning that it was written in HTML, Javascript and CSS, with the help of some some libraries like jQuery and Bootstrap (dependencies are included with the code in "assets" folder).
 
-* The OS doesn't have huge secrity (javascript, remember ?), but the level of the security is good enough for a consistent simulator to demonstarte its basic concepts.
+* The OS doesn't have huge security (javascript, remember ?), but the level of the security is good enough for a consistent simulator to demonstarte its basic concepts.
 
-* During the whole project we had the motto of "Do it, then do it right, the do it better" and we kept repeating it, but pretty much most of the time we were satisfied as the stage of "Do it right" and didn't go any further :"D.
+* During the whole project we had the motto of "Do it, then do it right, then do it better" and we kept repeating it, but pretty much most of the time we were satisfied at the stage of "Do it right" and didn't go any further :"D.
 
 * This project is really cool, I advice you to try it and give us your feed back.
 
