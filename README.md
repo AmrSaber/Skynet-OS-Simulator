@@ -2,6 +2,8 @@
 Simple OS web-based simulator was made as a final project for the OS course at the university.  
 The simulator includes a file manangement system, a schedueling simulator (very badly named as "Task manager") and a calculator that doesn't support the tirg. functions :"D.
 
+This application is now published on github pages <a href="https://amrsaber.github.io/Skynet-OS-Simulator" target="_blank">here</a>, with username `root` and password `aammm`.
+
 ## Introduction To The Simulator
 ### Login Screen
 When you open any page of the project and you are not logged in, you are redirected to the login screen to enter your credentials (credentials are in readme.md in code folder)
